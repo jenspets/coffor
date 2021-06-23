@@ -9,9 +9,9 @@ RDEXE = '/usr/bin/radiff2'
 
 if '__main__' == __name__:
     parser = argparse.ArgumentParser(description='Print combinations of filenames given as inputs')
-    parser.add_argument('names', metavar='String', type=str, nargs='+', help='Nmes to combine')
-    parser.add_argument('--alg', '-s', action='count', default=0)
-    parser.add_argument('--target', '-t', type=str, nargs=1, help='Target file to measure towards') 
+    parser.add_argument('names', metavar='Source', type=str, nargs='+', help='Source files to to compare')
+    parser.add_argument('--alg', '-s', action='count', default=0, help='Algorithm for comparison')
+    parser.add_argument('--target', '-t', type=str, nargs=1, help='Target file for comparing the sources') 
     args = parser.parse_args()
 
     if args.alg == 0:
